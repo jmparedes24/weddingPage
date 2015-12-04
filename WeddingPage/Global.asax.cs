@@ -18,8 +18,8 @@ namespace WeddingPage
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
-            ContainerBootstrapper.RegisterTypes(new UnityContainer);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);            
+            Bootstrapper.Initialise();
         }
     }
 }

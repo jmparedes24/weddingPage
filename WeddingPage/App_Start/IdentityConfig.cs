@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using WeddingPage.Models;
+using WeddingPage.Identity.Sql.Data.Context;
 
 namespace WeddingPage
 {

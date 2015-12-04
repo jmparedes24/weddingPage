@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CommonProject.Interfaces;
+using CommoProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +10,13 @@ namespace WeddingPage.Controllers
 {
     public class HomeController : Controller
     {
+        private IRepository<Guest> _repo;
+
+        public HomeController(IRepository<Guest> repo)
+        {
+            _repo = repo;
+        }
+
         public ActionResult Index()
         {
             return View();

@@ -6,17 +6,23 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WeddingPage;
 using WeddingPage.Controllers;
+using Moq;
+using CommonProject.Interfaces;
+using CommoProject.Models;
 
 namespace WeddingPage.Tests.Controllers
 {
     [TestClass]
     public class HomeControllerTest
     {
+        private Mock<IRepository<Guest>> _repo;
+
         [TestMethod]
         public void Index()
         {
             // Arrange
-            HomeController controller = new HomeController();
+            _repo = new Mock<IRepository<Guest>>();
+            HomeController controller = new HomeController(_repo.Object);
 
             // Act
             ViewResult result = controller.Index() as ViewResult;
@@ -29,7 +35,8 @@ namespace WeddingPage.Tests.Controllers
         public void About()
         {
             // Arrange
-            HomeController controller = new HomeController();
+            _repo = new Mock<IRepository<Guest>>();
+            HomeController controller = new HomeController(_repo.Object);
 
             // Act
             ViewResult result = controller.About() as ViewResult;
@@ -42,7 +49,8 @@ namespace WeddingPage.Tests.Controllers
         public void Contact()
         {
             // Arrange
-            HomeController controller = new HomeController();
+            _repo = new Mock<IRepository<Guest>>();
+            HomeController controller = new HomeController(_repo.Object);
 
             // Act
             ViewResult result = controller.Contact() as ViewResult;

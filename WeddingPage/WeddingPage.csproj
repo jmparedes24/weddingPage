@@ -206,7 +206,7 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="ContainerBootstrapper.cs" />
+    <Compile Include="Bootstrapper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -214,7 +214,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -294,6 +293,20 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommoProject\CommoProject.csproj">
+      <Project>{b51ef25e-b7c2-4887-a9df-cc64e3336dcb}</Project>
+      <Name>CommoProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeddingPage.Identity.Sql.Data\WeddingPage.Identity.Sql.Data.csproj">
+      <Project>{1d93117d-7f68-4855-b40c-de331496f911}</Project>
+      <Name>WeddingPage.Identity.Sql.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeddingPage.Sql\WeddingPage.Sql.csproj">
+      <Project>{6de351ce-bf7b-4b0a-b6c1-9e653d1a3fb3}</Project>
+      <Name>WeddingPage.Sql</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
