@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,6 +44,11 @@
     <Compile Include="Interfaces\IEntity.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\Finance\Account.cs" />
+    <Compile Include="Models\Finance\AccountType.cs" />
+    <Compile Include="Models\Finance\Movement.cs" />
+    <Compile Include="Models\Finance\Owner.cs" />
+    <Compile Include="Models\Finance\Status.cs" />
     <Compile Include="Models\Guest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

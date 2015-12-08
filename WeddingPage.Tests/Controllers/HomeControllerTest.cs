@@ -9,19 +9,20 @@ using WeddingPage.Controllers;
 using Moq;
 using CommonProject.Interfaces;
 using CommoProject.Models;
+using CommoProject.Models.Finance;
 
 namespace WeddingPage.Tests.Controllers
 {
     [TestClass]
     public class HomeControllerTest
     {
-        private Mock<IRepository<Guest>> _repo;
+        private Mock<IRepository<Status>> _repo;
 
         [TestMethod]
         public void Index()
         {
             // Arrange
-            _repo = new Mock<IRepository<Guest>>();
+            _repo = new Mock<IRepository<Status>>();
             HomeController controller = new HomeController(_repo.Object);
 
             // Act
@@ -35,7 +36,7 @@ namespace WeddingPage.Tests.Controllers
         public void About()
         {
             // Arrange
-            _repo = new Mock<IRepository<Guest>>();
+            _repo = new Mock<IRepository<Status>>();
             HomeController controller = new HomeController(_repo.Object);
 
             // Act
@@ -49,7 +50,7 @@ namespace WeddingPage.Tests.Controllers
         public void Contact()
         {
             // Arrange
-            _repo = new Mock<IRepository<Guest>>();
+            _repo = new Mock<IRepository<Status>>();
             HomeController controller = new HomeController(_repo.Object);
 
             // Act

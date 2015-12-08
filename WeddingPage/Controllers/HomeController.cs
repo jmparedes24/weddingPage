@@ -5,20 +5,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CommoProject.Models.Finance;
 
 namespace WeddingPage.Controllers
 {
     public class HomeController : Controller
     {
-        private IRepository<Guest> _repo;
+        private IRepository<Status> _repo;
 
-        public HomeController(IRepository<Guest> repo)
+        public HomeController(IRepository<Status> repo)
         {
             _repo = repo;
         }
 
         public ActionResult Index()
         {
+            var myestatus = _repo.FindById(1);
             return View();
         }
 
