@@ -22,7 +22,7 @@ namespace WeddingPage.Identity.Sql.Data.Context
     {
         public ApplicationDbContext()
             //: base("weddingDB", throwIfV1Schema: false)
-            : base(System.Configuration.ConfigurationManager.ConnectionStrings["weddingDB"].ConnectionString, throwIfV1Schema: false)
+            : base("weddingDB", throwIfV1Schema: false)
         {
         }
 
