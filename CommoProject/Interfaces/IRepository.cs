@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace CommonProject.Interfaces
+namespace CommoProject.Interfaces
 {
     public interface IRepository<T> where T: class
     {
@@ -11,6 +8,6 @@ namespace CommonProject.Interfaces
         void Add(T entity);
         void Delete(T entity);
         void Update(T entity);
-        T FindById(int Id);
+        T FindById(int id);
     }
 }

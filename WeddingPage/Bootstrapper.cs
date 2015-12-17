@@ -7,6 +7,7 @@ using Microsoft.Practices.Unity.Mvc;
 using System.Data.Entity;
 using System.Web.Mvc;
 using CommonProject.Interfaces;
+using CommoProject.Interfaces;
 using CommoProject.Models.Finance;
 using WeddingPage.Controllers;
 using WeddingPage.Identity.Sql.Data.Context;
@@ -38,7 +39,7 @@ namespace WeddingPage
 
             //DataBase context
             container.RegisterType<UserManager<ApplicationUser>>(new HierarchicalLifetimeManager());
-            container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(new HierarchicalLifetimeManager());
+            //container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(new HierarchicalLifetimeManager());
             container.RegisterType<DbContext, ApplicationDbContext>(new HierarchicalLifetimeManager());            
 
             container.RegisterType<DbContext, FinanceDb>(new PerRequestLifetimeManager());

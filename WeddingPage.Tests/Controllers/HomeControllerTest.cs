@@ -8,6 +8,7 @@ using WeddingPage;
 using WeddingPage.Controllers;
 using Moq;
 using CommonProject.Interfaces;
+using CommoProject.Interfaces;
 using CommoProject.Models;
 using CommoProject.Models.Finance;
 

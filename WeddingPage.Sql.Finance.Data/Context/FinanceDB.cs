@@ -15,7 +15,7 @@ namespace WeddingPage.Sql.Finance.Data.Context
         {
         }
 
-        public DbSet<Status> Statuses { get; set; }
+        public virtual IDbSet<Status> Statuses { get; set; }
         public DbSet<AccountType> AccountTypes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

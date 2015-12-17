@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommoProject.Interfaces;
 
 namespace WeddingPage.Sql.Repository
 {
@@ -43,7 +44,7 @@ namespace WeddingPage.Sql.Repository
             throw new NotImplementedException();
         }
 
-        public Guest FindById(int Id)
+        public Guest FindById(int id)
         {
             throw new NotImplementedException();
         }
