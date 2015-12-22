@@ -21,9 +21,7 @@
 
             <div class="sidebar-wrapper">
                 <div class="logo">
-                    <a href="http://www.creative-tim.com" class="simple-text">
-                        Creative Tim
-                    </a>
+                    @Html.ActionLink("WallAgSolutions", "Index","Home",null, new { @class= "simple-text" })
                 </div>
 
                 <ul class="nav">
@@ -153,7 +151,8 @@
 
     <div class="content">
         <div class="container-fluid">
-            <div class="row">
+            @RenderBody()
+            @*<div class="row">
                 <div class="col-md-4">
                     <div class="card">
                         <div class="header">
@@ -201,8 +200,6 @@
                     </div>
                 </div>
             </div>
-
-
 
             <div class="row">
                 <div class="col-md-6">
@@ -349,7 +346,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>*@
         </div>
     </div>
 
@@ -388,7 +385,7 @@
 
     </div>
     </div>
-        @RenderBody()
+       
 
             @*<div class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container">
