@@ -21,10 +21,11 @@ namespace WeddingPage
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap.min.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.css",                      
                       "~/Content/light-bootstrap-dashboard.css",
                       "~/Content/pe-icon-7-stroke.css",
                       "~/Content/font-awesome.css",
@@ -35,8 +36,12 @@ namespace WeddingPage
             bundles.Add(new ScriptBundle("~/bundles/TimJS").Include(
                         "~/Scripts/light-bootstrap-dashboard.js",
                         "~/Scripts/bootstrap-checkbox-radio-switch.js",
-                        "~/Scripts/bootstrap-notify.js"
+                        "~/Scripts/bootstrap-notify.js",
+                        "~/Scripts/bootstrap-select.js"
                         ));
+            bundles.Add(new ScriptBundle("~/bundles/Layout").Include(
+                       "~/Scripts/Views/Shared/_Layout.js"
+                       ));
         }
     }
 }
